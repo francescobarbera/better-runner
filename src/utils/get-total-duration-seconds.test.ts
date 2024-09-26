@@ -10,16 +10,12 @@ describe("getTotalDurationSeconds", () => {
   });
 
   test("it returns the correct total duration for a single run", () => {
-    const runs = [ makeARun() ];
+    const runs = [makeARun()];
 
     const result = getTotalDurationSeconds(runs);
 
-    assert.strictEqual(
-      result,
-      runs[0].durationSeconds
-    );
+    assert.strictEqual(result, runs[0].durationSeconds);
   });
-
 
   test("it returns the correct total duration for an array of runs", () => {
     const runs = Array.from({ length: 3 }, makeARun);
@@ -33,7 +29,6 @@ describe("getTotalDurationSeconds", () => {
         runs[2].durationSeconds,
     );
   });
-
 
   test("it returns 0 when the duration for an array of runs are always 0", () => {
     const runs = Array.from({ length: 3 }, () => ({

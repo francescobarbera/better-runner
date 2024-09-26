@@ -1,4 +1,4 @@
-import { ExternalLink } from "./external-link";
+import type { ExternalLink } from "./external-link";
 
 export type Activity = {
   date: string;

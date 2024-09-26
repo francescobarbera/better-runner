@@ -1,7 +1,7 @@
 import { randNumber, rand, randRecentDate, randBoolean } from "@ngneat/falso";
-import { Run, RunType } from "../types/run";
-import { Platforms } from "../types/external-link";
-import { SplitType } from "../types/split-type";
+import type { Run, RunType } from "../types/run";
+import type { Platforms } from "../types/external-link";
+import type { SplitType } from "../types/split-type";
 
 export function makeARun(): Run {
   const runType = rand(["FARTLEK", "SLOW_RUN", "RACE", "BY_FEEL"] as RunType[]);

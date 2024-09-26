@@ -24,9 +24,7 @@ describe("getTotalKms", () => {
 
     assert.strictEqual(
       result,
-      runs[0].distanceKm +
-        runs[1].distanceKm +
-        runs[2].distanceKm,
+      runs[0].distanceKm + runs[1].distanceKm + runs[2].distanceKm,
     );
   });
 

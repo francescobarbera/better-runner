@@ -1,5 +1,5 @@
-import { Activity } from "./activity";
-import { SplitType } from "./split-type";
+import type { Activity } from "./activity";
+import type { SplitType } from "./split-type";
 
 export type RunType = "FARTLEK" | "SLOW_RUN" | "RACE" | "BY_FEEL";
 
@@ -18,4 +18,4 @@ export type Run = (
       type: "FARTLEK";
       customSplits: Split[];
     }
-) & { averagePaceMinutesPerKm: number, elevetionGainMeters: number } & Activity;
+) & { averagePaceMinutesPerKm: number; elevetionGainMeters: number } & Activity;

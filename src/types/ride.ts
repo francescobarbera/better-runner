@@ -1,13 +1,13 @@
-import { Activity } from "./activity";
+import type { Activity } from "./activity";
 
 export type RideType = "INDOOR" | "OUTDOOR";
 
 export type Ride = (
   | {
-      type: "INDOOR"
+      type: "INDOOR";
     }
-    | {
-      type: "OUTDOOR"
-      elevetionGainMeters: number
+  | {
+      type: "OUTDOOR";
+      elevetionGainMeters: number;
     }
 ) & { averagePaceKmPerHour: number } & Activity;
