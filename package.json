@@ -1,0 +1,15 @@
+{
+  "name": "better-runner",
+  "version": "0.0.1",
+  "description": "A little project to store running data",
+  "main": "index.js",
+  "author": "barberaf84@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
+  }
+}
