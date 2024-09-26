@@ -1,48 +1,21 @@
-export enum RunType {
-  FARTLEK = "FARTLEK",
-  SLOW_RUN = "SLOW_RUN",
-  RACE = "RACE",
-  BY_FEEL = "BY_FEEL",
-}
+import { Activity } from "./activity";
+import { SplitType } from "./split-type";
 
-export enum SplitType {
-  KM = "KM",
-  WORMUP = "WORMUP",
-  COOLDOWN = "COOLDOWN",
-  INTERVAL = "INTERVAL",
-  REST = "REST",
-}
+export type RunType = "FARTLEK" | "SLOW_RUN" | "RACE" | "BY_FEEL";
 
 export type Split = {
+  type: SplitType;
   minuteKm: number;
   elevetionGainMeters: number;
   averageHeartRate: number;
 };
 
-type externalLink = {
-  platform: "strava" | "garmin";
-  url: string;
-}
-
-type RunBaseProperties = {
-  date: string;
-  withHeartRateMonitor: boolean;
-  distanceKm: number;
-  durationSeconds: number;
-  averageHeartRate: number;
-  averagePaceMinutesPerKm: number;
-  elevetionGainMeters: number;
-  comment: string;
-  externalLinks: externalLink[];
-};
-
 export type Run = (
   | {
-      type: RunType.SLOW_RUN | RunType.RACE | RunType.BY_FEEL;
+      type: "SLOW_RUN" | "RACE" | "BY_FEEL";
     }
   | {
-      type: RunType.FARTLEK;
-      customSplits: (Split & { splitType: SplitType })[];
+      type: "FARTLEK";
+      customSplits: Split[];
     }
-) &
-  RunBaseProperties;
+) & { averagePaceMinutesPerKm: number, elevetionGainMeters: number } & Activity;
