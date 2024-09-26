@@ -57,3 +57,21 @@ yarn start
 ```
 
 This will execute the build and then the `build/index.ts` file, which calculates and displays the total distance, duration, and elevation gain from the running data.
+
+## Testing
+
+To run the tests, use the following command:
+
+```sh
+yarn test
+```
+
+To run the coverage report, use the following command:
+
+```sh
+yarn coverage
+```
+
+## Example Data
+
+The project does not include the example data. You can add your own data to the `src/data/runs.ts` or `src/data/rides.ts` files.
