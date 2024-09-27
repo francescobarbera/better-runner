@@ -67,7 +67,7 @@ To get started with the project, follow these steps:
 
 ## Usage
 
-To run the project, use the following command:
+To run the project, rename the `src/index.example.ts` into `index.ts` and then use the following command:
 
 ```sh
 yarn build
@@ -92,4 +92,5 @@ yarn coverage
 
 ## Example Data
 
-The project does not include the example data. You can add your own data to the `src/data/runs.ts` or `src/data/rides.ts` files.
+The project includes some example data in the `src/data-examaple` folder.
+You can add your own data to the `src/data/runs.ts` or `src/data/rides.ts` files.
