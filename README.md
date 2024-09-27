@@ -22,6 +22,24 @@ Fot these reasons, I chose to build this project using TypeScript and use it as 
 I don't have a database for now, the amount of data I expect to handle is small, so I can store it in a ts file.
 That allows me to quickly add, remove, or modify data without the need for a database.
 
+## Vision of the Project
+
+The vision for Better Runner is to create a highly customizable and user-friendly tool for runners who want to gain deeper insights into their performance without the constraints of existing platforms. By focusing on simplicity and flexibility, Better Runner aims to empower users to track, analyze, and understand their running data in a way that best suits their individual needs.
+
+## Next Steps
+
+To achieve this vision, the following next steps could be considered:
+
+### 1. **Improve Data Visualization**
+   - **Graphs and Charts:** Implement visual representations of the data, such as graphs and charts, to help users better understand their performance trends.
+   - **Interactive Dashboards:** Create interactive dashboards where users can filter and compare different runs or splits.
+
+### 2. **Advanced Analytics**
+   - **Custom Metrics:** Allow users to define and track custom metrics that are important to them.
+   - **Performance Predictions:** Use machine learning algorithms to predict future performance based on historical data.
+
+By following these steps, Better Runner can evolve into a powerful and versatile tool that meets the diverse needs of the running community.
+
 ## Table of Contents
 
 - [Installation](#installation)
