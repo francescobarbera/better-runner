@@ -13,8 +13,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "yarn build && node build/index.js",
-    "test": "yarn build && node --test build/**/*.test.js",
+    "start": "node build/index.js",
+    "test": "node --test build/**/*.test.js",
     "coverage": "yarn build && node --test --experimental-test-coverage build/**/*.test.js",
     "lint": "yarn biome lint",
     "format": "yarn biome format"
