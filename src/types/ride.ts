@@ -10,4 +10,7 @@ export type Ride = (
       type: "OUTDOOR";
       elevetionGainMeters: number;
     }
-) & { averagePaceKmPerHour: number } & Activity;
+) & {
+  averagePaceKmPerHour: number;
+  averageRPM: number;
+} & Activity;

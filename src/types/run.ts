@@ -18,4 +18,8 @@ export type Run = (
       type: "FARTLEK";
       customSplits: Split[];
     }
-) & { averagePaceMinutesPerKm: number; elevetionGainMeters: number } & Activity;
+) & {
+  averagePaceMinutesPerKm: number;
+  elevetionGainMeters: number;
+  averageCadence: number;
+} & Activity;
