@@ -6,7 +6,7 @@ export type RunType = "FARTLEK" | "SLOW_RUN" | "RACE" | "BY_FEEL";
 export type Split = {
   type: SplitType;
   minuteKm: number;
-  elevetionGainMeters: number;
+  elevationGainMeters: number;
   averageHeartRate: number;
 };
 
@@ -20,6 +20,6 @@ export type Run = (
     }
 ) & {
   averagePaceMinutesPerKm: number;
-  elevetionGainMeters: number;
+  elevationGainMeters: number;
   averageCadence: number;
 } & Activity;

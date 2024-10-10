@@ -14,7 +14,7 @@ describe("getTotalElevationGainMeters", () => {
 
     const result = getTotalElevationGainMeters(runs);
 
-    assert.strictEqual(result, runs[0].elevetionGainMeters);
+    assert.strictEqual(result, runs[0].elevationGainMeters);
   });
 
   test("it returns the correct total elevation gain for an array of runs", () => {
@@ -24,16 +24,16 @@ describe("getTotalElevationGainMeters", () => {
 
     assert.strictEqual(
       result,
-      runs[0].elevetionGainMeters +
-        runs[1].elevetionGainMeters +
-        runs[2].elevetionGainMeters,
+      runs[0].elevationGainMeters +
+        runs[1].elevationGainMeters +
+        runs[2].elevationGainMeters,
     );
   });
 
   test("it returns 0 when the elevation gain for an array of runs are always 0", () => {
     const runs = Array.from({ length: 3 }, () => ({
       ...makeARun(),
-      elevetionGainMeters: 0,
+      elevationGainMeters: 0,
     }));
 
     const result = getTotalElevationGainMeters(runs);

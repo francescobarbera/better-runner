@@ -10,7 +10,7 @@ const run: Run[] = [
     averageHeartRate: 141,
     averageCadence: 85,
     averagePowerW: 200,
-    elevetionGainMeters: 57,
+    elevationGainMeters: 57,
     withHeartRateMonitor: true,
     activeKilocalories: 500,
     comment: "A good slow run with some music",
