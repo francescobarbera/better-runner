@@ -13,10 +13,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js",
-    "test": "node --test build/**/*.test.js",
-    "coverage": "yarn build && node --test --experimental-test-coverage build/**/*.test.js",
+    "start": "node dist/index.js",
+    "test": "node --test dist/**/*.test.js",
+    "coverage": "yarn build && node --test --experimental-test-coverage dist/**/*.test.js",
     "lint": "yarn biome lint",
     "format": "yarn biome format"
-  }
+  },
+  "packageManager": "yarn@4.5.0"
 }
