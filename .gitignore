@@ -9,3 +9,14 @@ dist
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Ignore build and dependency files for multiple packages
+packages/*/node_modules
+packages/*/dist
+packages/*/.pnp.*
+packages/*/.yarn/*
+!packages/*/.yarn/patches
+!packages/*/.yarn/plugins
+!packages/*/.yarn/releases
+!packages/*/.yarn/sdks
+!packages/*/.yarn/versions

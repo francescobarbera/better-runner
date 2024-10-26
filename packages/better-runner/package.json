@@ -1,0 +1,28 @@
+{
+  "name": "better-runner",
+  "version": "0.0.1",
+  "description": "A little project to store running data",
+  "main": "index.js",
+  "author": "barberaf84@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.17.1",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "biome": "^10.0.1",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --test",
+    "coverage": "node --test --coverage"
+  }
+}
