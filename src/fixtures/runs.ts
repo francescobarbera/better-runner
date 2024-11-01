@@ -1,18 +1,14 @@
-import {
-  randNumber,
-  rand,
-  randRecentDate,
-  randBoolean,
-  randFloat,
-} from "@ngneat/falso";
+import { randNumber, rand, randRecentDate, randBoolean } from "@ngneat/falso";
 import type { Run, RunType } from "../types/run";
 import type { Platforms } from "../types/external-link";
-import type { SplitType } from "../types/split-type";
+import type { IntervalType } from "../types/interval-type";
 
-export function makeARun(): Run {
+export type Races = "10k" | "Marathon" | "Half marathon";
+
+export function makeARun(): Run<Races> {
   const runType = rand(["FARTLEK", "SLOW_RUN", "RACE", "BY_FEEL"] as RunType[]);
 
-  const baseRun: Omit<Run, "type"> = {
+  const baseRun: Omit<Run<Races>, "type"> = {
     date: randRecentDate().toISOString(),
     withHeartRateMonitor: randBoolean(),
     distanceKm: randNumber({ min: 1, max: 20, fraction: 2 }),
@@ -37,21 +33,32 @@ export function makeARun(): Run {
     return {
       ...baseRun,
       type: "FARTLEK",
-      customSplits: Array.from(
+      intervals: Array.from(
         { length: randNumber({ min: 1, max: 10 }) },
         () => ({
           type: rand([
             "KM",
-            "WORMUP",
+            "WARMUP",
             "COOLDOWN",
-            "INTERVAL",
+            "WORK",
             "REST",
-          ] as SplitType[]),
-          minuteKm: randNumber({ min: 4, max: 6, fraction: 2 }),
-          elevationGainMeters: randNumber({ min: 0, max: 100 }),
+          ] as IntervalType[]),
+          distanceKm: randNumber({ min: 0, max: 5, fraction: 2 }),
+          durationSeconds: randNumber({ min: 10, max: 60 * 5 }),
+          averagePaceMinutesPerKm: randNumber({ min: 4, max: 6, fraction: 2 }),
+          averageCadence: randNumber({ min: 100, max: 200 }),
+          averagePowerW: randNumber({ min: 100, max: 300 }),
           averageHeartRate: randNumber({ min: 120, max: 180 }),
         }),
       ),
+    };
+  }
+
+  if (runType === "RACE") {
+    return {
+      ...baseRun,
+      type: "RACE",
+      raceName: rand(["10k", "Marathon", "Half marathon"]),
     };
   }
 

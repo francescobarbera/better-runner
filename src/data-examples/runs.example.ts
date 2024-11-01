@@ -1,6 +1,8 @@
 import type { Run } from "../types/run";
 
-const run: Run[] = [
+type Races = "10k in my hometown" | "Berlin Half Marathon" | "NY Marathon";
+
+const runs: Run<Races>[] = [
   {
     type: "SLOW_RUN",
     date: "2024-09-17",
@@ -23,4 +25,4 @@ const run: Run[] = [
   },
 ];
 
-export default run;
+export default runs;

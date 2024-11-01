@@ -1,6 +1,9 @@
+import { Races } from "../fixtures/runs";
 import type { Run } from "../types/run";
 
-export default function getAverageDurationSeconds(runs: Run[]): number {
+export default function getAverageDurationSeconds<T extends string>(
+  runs: Run<T>[],
+): number {
   if (runs.length === 0) {
     return 0;
   }
