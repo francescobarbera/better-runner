@@ -1,4 +1,3 @@
-
 import type { Run } from "../types/run";
 
 export default function getTotalElevationGainMeters<T extends string>(

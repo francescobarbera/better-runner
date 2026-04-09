@@ -1,7 +1,5 @@
 import { describe, test } from "node:test";
-import {
-  filterByCommentStartsWith,
-} from "./filter-by-comment";
+import { filterByCommentStartsWith } from "./filter-by-comment";
 import { makeARun } from "../fixtures/runs";
 import assert from "node:assert";
 
