@@ -1,10 +1,7 @@
 import { describe, test } from "node:test";
 import {
   filterByCommentStartsWith,
-  filterByCommentEndsWith,
-  filterByCommentContains,
 } from "./filter-by-comment";
-import { Run } from "../types/run";
 import { makeARun } from "../fixtures/runs";
 import assert from "node:assert";
 

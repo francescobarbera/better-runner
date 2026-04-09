@@ -1,4 +1,4 @@
-import { Races } from "../fixtures/runs";
+
 import type { Run } from "../types/run";
 
 export default function getTotalDurationSeconds<T extends string>(
